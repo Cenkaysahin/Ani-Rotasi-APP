@@ -1,7 +1,6 @@
 # Takım Üyeleri
 | Üyeler | Roller |
 | ------------- | ------------- |
-| Cenkay Şahin  | Scrum Master |
 | Cenkay Şahin  | Scrum Master & Developer |
 | Buket Nur Aytaç | Developer |
 | Burcu Dağ | Designer |
