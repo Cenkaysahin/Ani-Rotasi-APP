@@ -126,7 +126,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     InkWell(
                       child: Container(
-                        margin: EdgeInsets.only(top: 10, bottom: 40, right: 30, left: 30),
+                        margin: EdgeInsets.only(top: 70, bottom: 40, right: 30, left: 30),
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(

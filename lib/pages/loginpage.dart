@@ -130,7 +130,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 Container(
-                  margin: EdgeInsets.only(top: 10, bottom: 40, left: 30, right: 20),
+                  margin: EdgeInsets.only(top: 100, bottom: 40, left: 30, right: 20),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(

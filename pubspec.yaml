@@ -11,7 +11,8 @@ dependencies:
 
   flutter:
     sdk: flutter
-
+  geolocator: ^7.6.2
+  csv: ^5.0.0
 
 
   get: ^4.6.1
@@ -20,6 +21,9 @@ dependencies:
   cupertino_icons: ^1.0.6
   animated_splash_screen: ^1.3.0
   tcard: ^1.3.5
+  url_launcher: ^6.1.5
+  image_picker: ^0.8.6+3
+  intl: ^0.18.1
 
 
 
@@ -37,5 +41,123 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/tourist_attractions.csv
+    - assets/adana_cinema_museum.png
+    - assets/stone_bridge.png
+    - assets/great_clock_tower.png
+    - assets/seyhan_merkez_park.png
+    - assets/ataturk_park.png
+    - assets/natural_park.png
+    - assets/sabanci_central_mosque.png
+    - assets/tarihi_kazancilar_carsi.png
+    - assets/ziyapasa_park.png
+    - assets/ataturk_scientific_cultural_museum.png
+    - assets/adana_etnografya_muzesi.png
+    - assets/museum_of_anatolian_civilizations.png
+    - assets/anitkabir.png
+    - assets/haci_bayram_mosque.png
+    - assets/ankara_castle.png
+    - assets/kugulu_park.png
+    - assets/kecioren_falls.png
+    - assets/ulucanlar_prison_museum.png
+    - assets/masal_adasi.png
+    - assets/ataturk_statue.png
+    - assets/republic_museum.png
+    - assets/50th_year_park.png
+    - assets/botanical_park.png
+    - assets/hamamonu_old_ankara_houses.png
+    - assets/column_of_julian.png
+    - assets/independence_park.png
+    - assets/erimtan_archaeology_and_art_museum.png
+    - assets/esertepe_park.png
+    - assets/metu_forest.png
+    - assets/ankara_evi_park.png
+    - assets/hamamarkasi_public_square.png
+    - assets/green_tomb.png
+    - assets/koza_han.png
+    - assets/tomb_of_osman_gazi.png
+    - assets/muradiye_complex.png
+    - assets/tophane_clock_tower.png
+    - assets/bursa_city_museum.png
+    - assets/bursa_grand_mosque.png
+    - assets/sultans_mansion_museum.png
+    - assets/inkaya_historical_plane_tree.png
+    - assets/resat_oyal_culture_park.png
+    - assets/kaplikaya_growth_center.png
+    - assets/bursa_archaeological_museum.png
+    - assets/karagoz_museum.png
+    - assets/heykel.png
+    - assets/han_brass.png
+    - assets/kestel_castle.png
+    - assets/kureklidere_falls.png
+    - assets/cumalikizik_village.png
+    - assets/orhan_gazi_mosque.png
+    - assets/viewpoint.png
+    - assets/temenyeri_park.png
+    - assets/inkaya_historical_plane_tree_610.png
+    - assets/bursa.png
+    - assets/topkapi_palace_museum.png
+    - assets/basilica_cistern.png
+    - assets/dolmabahce_palace.png
+    - assets/the_blue_mosque.png
+    - assets/hagia_sophia_grand_mosque.png
+    - assets/galata_tower.png
+    - assets/dolmabahce_palace.png
+    - assets/grand_bazaar.png
+    - assets/beylerbeyi_palace.png
+    - assets/istanbul_archaeological_museums.png
+    - assets/sultanahmet_square.png
+    - assets/egyptian_bazaar.png
+    - assets/suleymaniye_mosque.png
+    - assets/gulhane_park.png
+    - assets/kariye_mosque.png
+    - assets/bosfor_istanbul.png
+    - assets/galata_bridge.png
+    - assets/dolmabahce_clock_tower.png
+    - assets/beyazit_square.png
+    - assets/cistern_of_theodosius.png
+    - assets/izmir_historical_elevator_building.png
+    - assets/izmir_wildlife_park.png
+    - assets/clock_tower_of_izmir.png
+    - assets/izmir_ataturk_aniti.png
+    - assets/inciralti_kent_ormani.png
+    - assets/arkas_art_center.png
+    - assets/izmir_archaeological_and_ethnography_museum.png
+    - assets/kemeralti_bazaar.png
+    - assets/ataturk_konak_square.png
+    - assets/agora_oren_yeri.png
+    - assets/agora_of_smyrna.png
+    - assets/varyant.png
+    - assets/izulas_izmir_balcova_teleferik.png
+    - assets/universal_childrens_museum_and_theme_park.png
+    - assets/guzelyali_park.png
+    - assets/izmir_cruise_pirs.png
+    - assets/ataturk_museum.png
+    - assets/arkas_marine_historical_center.png
+    - assets/peace_steps.png
+    - assets/history_arts_museum.png
+    - assets/mevlana_museum.png
+    - assets/konya_tropical_butterfly_garden.png
+    - assets/azizia_mosque.png
+    - assets/stone_works_museum_of_fine_minaret.png
+    - assets/around_the_world_in_80_thousand_park.png
+    - assets/konya_science_center.png
+    - assets/selimiye_mosque.png
+    - assets/culture_park.png
+    - assets/mevlana_meydani.png
+    - assets/karatay_belediyesi_hayvanat_bahcesi.png
+    - assets/kyoto_japanese_park.png
+    - assets/karatay_madrasa.png
+    - assets/karatay_sehir_parki.png
+    - assets/akyokus_park.png
+    - assets/shams_of_tabriz_mosque_and_tomb.png
+    - assets/sahip_ata_museum.png
+    - assets/konya_meram_baglari.png
+    - assets/karaaslan_hadimi_park.png
+    - assets/gedavet_park.png
+    - assets/sircal_medrese.png
+    - assets/placeholder.png
+
+
 
 
