@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "437928165779",
+    "project_id": "ani-rotasi",
+    "storage_bucket": "ani-rotasi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437928165779:android:9589abf81b0be5bb6ae866",
+        "android_client_info": {
+          "package_name": "com.example.oua_bootcamp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0ijLkDk96PusK6JCwH3xoc2mPzBVgQLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

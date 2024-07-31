@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:oua_bootcamp/Pages/loginpage.dart';
 import 'package:tcard/tcard.dart';
 import '../modules/data_provider.dart';
 import 'package:get/get.dart';
@@ -18,11 +20,13 @@ class _AipageState extends State<Aipage> {
   List<Map<String, dynamic>> _filteredCards = [];
   bool _showFilters = true;
 
-  final SelectedCardsController _selectedCardsController = Get.find<SelectedCardsController>();
+  final SelectedCardsController _selectedCardsController =
+      Get.find<SelectedCardsController>();
 
   Future<void> _fetchPlaces() async {
     if (_selectedCity != null && _selectedDistrict != null) {
-      final places = await DataProvider.getCards(_selectedCity!, _selectedDistrict!);
+      final places =
+          await DataProvider.getCards(_selectedCity!, _selectedDistrict!);
       setState(() {
         _filteredCards = places;
         _showFilters = false;
@@ -38,10 +42,26 @@ class _AipageState extends State<Aipage> {
         centerTitle: true,
         backgroundColor: Color(0xff34322c),
         automaticallyImplyLeading: false,
-        title: Text(
+        title: const Text(
           'ANI ROTASI',
           style: TextStyle(color: Colors.white),
         ),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              // Oturumu kapat
+              await FirebaseAuth.instance.signOut();
+
+              // Navigation geçmişinin tamamını temizle ve Login sayfasına yönlendir
+              Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(builder: (ctx) => const LoginPage()),
+                (Route<dynamic> route) => false,
+              );
+            },
+            icon: const Icon(Icons.logout),
+            color: Colors.white70,
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -61,7 +81,8 @@ class _AipageState extends State<Aipage> {
                           _selectedDistrict = null;
                         });
                       },
-                      items: DataProvider.getCities().map<DropdownMenuItem<String>>((city) {
+                      items: DataProvider.getCities()
+                          .map<DropdownMenuItem<String>>((city) {
                         return DropdownMenuItem<String>(
                           value: city,
                           child: Text(city),
@@ -77,8 +98,8 @@ class _AipageState extends State<Aipage> {
                         });
                       },
                       items: (_selectedCity != null
-                          ? DataProvider.getDistricts(_selectedCity!)
-                          : [])
+                              ? DataProvider.getDistricts(_selectedCity!)
+                              : [])
                           .map<DropdownMenuItem<String>>((district) {
                         return DropdownMenuItem<String>(
                           value: district,
@@ -101,72 +122,74 @@ class _AipageState extends State<Aipage> {
           Expanded(
             child: _filteredCards.isNotEmpty
                 ? TCard(
-              cards: _filteredCards.map((place) {
-                return Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  margin: EdgeInsets.symmetric(vertical: 35.0, horizontal: 20.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        height: 300.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
-                          image: DecorationImage(
-                            image: AssetImage(place['photo_url']),
-                            fit: BoxFit.cover,
-                          ),
+                    cards: _filteredCards.map((place) {
+                      return Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        margin: EdgeInsets.symmetric(
+                            vertical: 35.0, horizontal: 20.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text(
-                              place['name'],
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18.0,
+                            Container(
+                              width: double.infinity,
+                              height: 300.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.vertical(
+                                    top: Radius.circular(10.0)),
+                                image: DecorationImage(
+                                  image: AssetImage(place['photo_url']),
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              textAlign: TextAlign.center,
                             ),
-                            SizedBox(height: 4.0),
-                            Text(
-                              '${place['address']}',
-                              style: TextStyle(color: Colors.grey[600]),
-                              textAlign: TextAlign.center,
-                            ),
-                            SizedBox(height: 4.0),
-                            Text(
-                              'Rating: ${place['rating']} - User Ratings: ${place['user_ratings_total']}',
-                              style: TextStyle(color: Colors.grey[600]),
-                              textAlign: TextAlign.center,
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    place['name'],
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18.0,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  SizedBox(height: 4.0),
+                                  Text(
+                                    '${place['address']}',
+                                    style: TextStyle(color: Colors.grey[600]),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  SizedBox(height: 4.0),
+                                  Text(
+                                    'Rating: ${place['rating']} - User Ratings: ${place['user_ratings_total']}',
+                                    style: TextStyle(color: Colors.grey[600]),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
-                      ),
-                    ],
-                  ),
-                );
-              }).toList(),
-              onForward: (index, info) {
-                if (info.direction == SwipDirection.Right) {
-                  _selectedCardsController.addCard(_filteredCards[index]);
-                  print("Kart $index seçildi");
-                } else if (info.direction == SwipDirection.Left) {
-                  print("Kart $index reddedildi");
-                }
-              },
-              onEnd: () {
-                print("Kartlar bitti");
-              },
-            )
+                      );
+                    }).toList(),
+                    onForward: (index, info) {
+                      if (info.direction == SwipDirection.Right) {
+                        _selectedCardsController.addCard(_filteredCards[index]);
+                        print("Kart $index seçildi");
+                      } else if (info.direction == SwipDirection.Left) {
+                        print("Kart $index reddedildi");
+                      }
+                    },
+                    onEnd: () {
+                      print("Kartlar bitti");
+                    },
+                  )
                 : Center(
-              child: Text('Gösterilecek kart yok'),
-            ),
+                    child: Text('Gösterilecek kart yok'),
+                  ),
           ),
         ],
       ),
