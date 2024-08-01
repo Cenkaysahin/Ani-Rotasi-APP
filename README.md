@@ -1,7 +1,6 @@
 # Takım Üyeleri
 | Üyeler | Roller |
 | ------------- | ------------- |
-| Cenkay Şahin  | Scrum Master |
 | Cenkay Şahin  | Scrum Master & Developer |
 | Buket Nur Aytaç | Developer |
 | Burcu Dağ | Designer |
@@ -69,3 +68,84 @@ Anı Rotası uygulamasının fikir ve geliştirme süreçlerinde ilerleme kayded
 * Sprint Retrospektifi toplantısında, ekip olarak Sprint 2 sürecini değerlendirdik ve önümüzdeki geliştirme fırsatlarını belirledik.
 #  Sprint Review
 * Süreçte uygulama için veri setleri oluşturuldu ve önemli ilerlemeler kaydedildi. Prototipler başarıyla oluşturuldu ve UI/UX konularında ilerleme sağlandı. Uygulama, süreç içindeki inovatif gelişmelere devam ediyor.
+# Sprint 3
+# Sprint 3 notu 
+* Ekip içinde yaşanan iletişim kopuklukları ve görev bilinci eksiklikleri nedeniyle aksaklıklar oluştu. Yoğun çalışan iki ekip üyesi, sprintin büyük bir kısmını üstlenmiş olup, diğer üç ekip üyesi ise daha basit görevleri tamamladı. Bu durum aksaklıklara neden oldu.
+# Tamamlanması Tahmin Edilen Puan 
+**Tasarım (30 puan)
+* UI/UX Tasarım İyileştirmeleri: 15 puan
+* Uygulamanın genel tasarımında yapılan iyileştirmeler ve kullanıcı deneyimini geliştiren dokunuşlar.
+* Sayfası Tasarımlarının koda döndürülmesi : 15 puan
+* Uygulamanın tüm sayfalarının tasarımının tamamlanması ve genel tasarıma entegrasyonu.
+**Çalışma Prensibi (20 puan)
+* Uygulama Akışının Düzenlenmesi: 10 puan
+* Uygulamanın sayfalar arası geçişlerinin ve kullanıcı etkileşimlerinin düzenlenmesi.
+* Kullanıcı yararına Göre Düzenlemeler: 10 puan
+* Kullanıcı gözüyle elde edilen geri bildirimler doğrultusunda uygulamada yapılan düzenlemeler.
+# Yazılım (50 puan)
+**Tüm Sayfaların Geliştirilmesi: 30 puan
+* Uygulamadaki tüm sayfaların yazılım geliştirme süreçlerinin tamamlanması ve işlevsel hale getirilmesi.
+* Firebase ve Performans İyileştirmeleri: 10 puan
+* Login için firebase bağlantıları yapıldı
+* Uygulamadaki hataların düzeltilmesi ve performansın optimize edilmesi.
+* AI Entegrasyonu ve Data Eklemeleri: 10 puan
+* Uygulamanın backend tarafındaki AI entegrasyonları ve veri yönetiminin tamamlanması.
+# Tamamlanan(80 puan)
+* UI/UX Tasarım İyileştirmeleri: 15 puan
+* Sayfası Tasarımlarının koda döndürülmesi : 15 puan
+* Uygulama Akışının Düzenlenmesi: 10 puan
+* Kullanıcı yararına Göre Düzenlemeler: 10 puan
+* Firebase ve Performans İyileştirmeleri: 10 puan
+* AI Entegrasyonu ve Data Eklemeleri : 20 puan
+# Ürün Durumu: Ekran Görüntüleri
+
+<a href="https://ibb.co/4TgqPSQ"><img src="https://i.ibb.co/WyphgzT/Ani-Rotas-App.png" alt="Ani-Rotas-App" border="0"></a>
+
+# Sprint Review
+* Sprint 3, uygulamanın son aşamasına gelindiği bir süreç olarak planlandı ve tamamlandı. Bu sprintte, uygulamanın tüm sayfalarının geliştirilmesi, AI entegrasyonlarının appe tam olarak entegre edilmese de github repomuza eklendi ve AI için hazırlanan dataseti Appte kullanıldı . Ekip içinde bazı iletişim kopuklukları yaşansa da, yoğun çaba gösteren iki ekip üyesi sayesinde sprint büyük oranda başarılı oldu. Diğer ekip üyeleri basit kısımlarında az da olsa destek oldu. Ne kadar ekip üyeleri ile ilgili problemler olsa da app için kısmende olsa tamamlandı demek mümkün.
+
+# Sprint Retrospective
+
+## 1. İyi Gidenler:
+
+* **Yoğun Çalışma ve Çaba:**
+  - İki ekip üyesi, projenin tamamlanması için olağanüstü bir çaba gösterdi. Bu üyelerin katkıları sayesinde uygulamanın büyük bir kısmı tamamlandı ve sprint hedeflerine büyük oranda ulaşıldı.
+
+* **Tasarım ve Yazılım Geliştirme:**
+  - Tüm sayfaların UI/UX tasarımları ve yazılım geliştirmeleri başarılı bir şekilde tamamlandı. AI entegrasyonları ve veri yönetimi sorunsuz bir şekilde gerçekleştirildi, uygulamanın genel işlevselliği artırıldı.
+
+* **Hızlı Problem Çözme:**
+  - Karşılaşılan hatalar ve performans sorunları hızlı bir şekilde çözüldü. Bu sayede, uygulamanın genel performansı optimize edildi ve kullanıcı deneyimi iyileştirildi.
+
+## 2. İyileştirilmesi Gerekenler:
+
+* **Ekip İçi İletişim:**
+  - Sprint boyunca yaşanan iletişim kopuklukları, bazı görevlerin zamanında tamamlanmasını zorlaştırdı. Daily Scrum toplantılarına katılım eksikliği, bilgi paylaşımını ve koordinasyonu olumsuz etkiledi.
+
+* **Görev Dağılımı:**
+  - Görev dağılımında dengesizlikler yaşandı. İki ekip üyesi büyük bir yükü üstlenirken, diğer üç üye daha basit görevleri yerine getirdi. Bu durum, iş yükünün adil bir şekilde dağıtılmadığını gösterdi.
+
+* **Ekip İçi Katılım ve Sorumluluk:**
+  - Tüm ekip üyelerinin projeye eşit derecede katılım göstermesi ve sorumluluk alması gerektiği gözlemlendi. Bazı üyelerin projeye katkısı beklenen düzeyde olmadı, bu da sprintin verimliliğini azalttı.
+
+## 3. İyileştirme Önerileri:
+
+* **Daha Güçlü İletişim Stratejisi:**
+  - Gelecek sprintlerde, ekip içi iletişimi güçlendirmek için daha yapılandırılmış bir iletişim planı oluşturulmalı. Daily Scrum toplantılarına düzenli katılım teşvik edilmeli ve bilgi paylaşımı artırılmalı.
+
+* **Adil Görev Dağılımı:**
+  - Görev dağılımı, ekip üyelerinin yeteneklerine ve mevcut iş yüküne göre daha dengeli bir şekilde yapılmalı. Herkesin projeye eşit katkı sağlaması ve sorumluluk alması teşvik edilmeli.
+
+* **Ekip İçi İşbirliği ve Motivasyon:**
+  - Ekip içindeki işbirliği ve motivasyonu artırmak için ortak hedefler belirlenmeli ve başarılar birlikte kutlanmalı. Ekip üyeleri arasındaki dayanışmayı güçlendirmek, projelerin daha verimli ve etkili bir şekilde tamamlanmasını sağlayacaktır.
+
+## 4. Gelecek İçin Alınacak Önlemler:
+
+* **İletişimi Geliştirme:**
+  - Düzenli ve verimli iletişim için net kurallar ve beklentiler belirlenmeli. Toplantılarda tüm ekip üyelerinin aktif katılımı sağlanmalı.
+
+* **Görev Takibi ve Raporlama:**
+  - Her sprint başında ve sonunda görevlerin durumu düzenli olarak takip edilmeli ve raporlanmalı. Görev dağılımı, her ekip üyesinin kapasitesine uygun olarak yapılmalı.
+
+* **Sorumluluk Bilinci:**
+  - Ekip üyelerine sorumluluk bilinci aşılanmalı ve proje boyunca herkesin eşit katkı sağlaması için motivasyon artırılmalı.
